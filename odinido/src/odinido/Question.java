@@ -1,6 +1,6 @@
 package odinido;
 
-public class Question {
+public abstract class Question {
     private int amountOfPoints;
     private String question;
     private String givenAnswer;
@@ -31,4 +31,6 @@ public class Question {
     public String getGivenAnswer() {
         return this.givenAnswer;
     }
+    
+    public abstract boolean checkGivenAnswer(String answer);
 }
