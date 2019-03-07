@@ -6,10 +6,9 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 public class ShortAnswerQuestion extends Question {
-	public ArrayList<String> correctAnswers = new ArrayList<String>();
+	public ArrayList<String> correctAnswers = new ArrayList<>();
 	
-	public ShortAnswerQuestion(ArrayList<String> correctAnswers) {
-		this.correctAnswers = correctAnswers;
+	public ShortAnswerQuestion() {
 	}
 	
 	public void addCorrectAnswer(String correctAnswer) {
@@ -19,19 +18,18 @@ public class ShortAnswerQuestion extends Question {
 	@Override
     public void showQuestionAndGetInput() {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        System.out.print("Vraag: " + getQuestion());
+        System.out.print("Vraag: " + getQuestion() + "\n");
         try {
             setGivenAnswer(reader.readLine());
         } catch (IOException e) {
             e.printStackTrace();
         }
-        System.out.println(getGivenAnswer());
     }
 
 	@Override
-	public boolean checkGivenAnswer(String answer) {
+	public boolean checkGivenAnswer() {
 		for(String correctAnswer : correctAnswers) {
-			if(answer.equals(answer)) {
+			if(getGivenAnswer().equals(correctAnswer)) {
 				return true;
 			}
 		}

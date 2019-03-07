@@ -32,5 +32,5 @@ public abstract class Question {
         return this.givenAnswer;
     }
     
-    public abstract boolean checkGivenAnswer(String answer);
+    public abstract boolean checkGivenAnswer();
 }
