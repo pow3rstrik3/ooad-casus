@@ -8,8 +8,9 @@ import java.util.ArrayList;
 public class ShortAnswerQuestion extends Question {
 	public ArrayList<String> correctAnswers = new ArrayList<String>();
 	
-	public ShortAnswerQuestion(ArrayList<String> correctAnswers) {
+	public ShortAnswerQuestion(ArrayList<String> correctAnswers, String question) {
 		this.correctAnswers = correctAnswers;
+		this.setQuestion(question);
 	}
 	
 	public void addCorrectAnswer(String correctAnswer) {
