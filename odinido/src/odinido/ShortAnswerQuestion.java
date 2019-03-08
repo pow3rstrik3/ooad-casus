@@ -6,8 +6,8 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 public class ShortAnswerQuestion extends Question {
-	public ArrayList<String> correctAnswers = new ArrayList<>();
-	
+	private ArrayList<String> correctAnswers = new ArrayList<>();
+
 	public ShortAnswerQuestion() {
 	}
 	
@@ -34,5 +34,13 @@ public class ShortAnswerQuestion extends Question {
 			}
 		}
 		return false;
+	}
+	
+	public ArrayList<String> getCorrectAnswers() {
+		return correctAnswers;
+	}
+
+	public void setCorrectAnswers(ArrayList<String> correctAnswers) {
+		this.correctAnswers = correctAnswers;
 	}
 }

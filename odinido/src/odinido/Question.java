@@ -5,8 +5,9 @@ public abstract class Question {
     private String question;
     private String givenAnswer;
 
-    public void showQuestionAndGetInput() {
-    }
+    public abstract void showQuestionAndGetInput();
+    
+    public abstract boolean checkGivenAnswer();
 
     public void setAmountOfPoints(int points) {
         this.amountOfPoints = points;
@@ -31,6 +32,4 @@ public abstract class Question {
     public String getGivenAnswer() {
         return this.givenAnswer;
     }
-    
-    public abstract boolean checkGivenAnswer();
 }
